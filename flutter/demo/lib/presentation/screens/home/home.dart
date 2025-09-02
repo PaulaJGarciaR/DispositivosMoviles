@@ -9,7 +9,7 @@ class HomeScreen extends StatelessWidget {
     return  Scaffold(
       appBar: AppBar(
         title: const Text("Home Screen"),
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: Colors.indigoAccent,
       ),
         body: Center(child: FloatingActionButton(onPressed: (){
           Navigator.pushNamed(context, 'button');
