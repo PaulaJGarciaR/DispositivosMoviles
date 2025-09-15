@@ -1,56 +1,57 @@
 import 'package:flutter/material.dart';
 
+void main() {
+  runApp(CardScreen());
+}
+
 class CardScreen extends StatelessWidget {
   const CardScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("CARD"),
-        backgroundColor: Colors.deepPurpleAccent,
-      ),
+      appBar: AppBar(title: Text("card")),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            const Card(
+            Card(
               elevation: 1.0,
               child: Padding(
                 padding: const EdgeInsets.all(15.0),
-                child: Text("Tarjeta 1"),
+                child: Text("hola card uno"),
               ),
             ),
-            const Card(
+
+            Card(
               elevation: 3.0,
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadiusGeometry.all(Radius.circular(15.0)),
-                side: BorderSide(color: Color.fromARGB(255, 151, 114, 251)),
+                borderRadius: BorderRadiusGeometry.all(Radius.circular(30.0)),
+                side: BorderSide(color: Colors.redAccent),
               ),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Text("Tarjeta rounded"),
-              ),
-            ),
-            const Card(
-              color: Color.fromARGB(255, 181, 154, 254),
-              elevation: 5.0,
-              child: Padding(
-                padding: const EdgeInsets.all(15.0),
-                child: Text("Tarjeta 3"),
+                child: Text("card ROUNDED"),
               ),
             ),
             Card(
+              color: Colors.cyanAccent,
               elevation: 8.0,
+              child: Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Text("hola card tres"),
+              ),
+            ),
+            Card(
+              elevation: 15.0,
               child: Stack(
                 children: [
                   Image.network(
-                    'https://i.redd.it/3840x2160-a-silent-voice-multiple-colors-versions-v0-6dj4z2zb0rd91.png?width=3840&format=png&auto=webp&s=459bde8e75da598f9aeab42a51437bb8cab304d6',
+                    'https://images.pexels.com/photos/13123976/pexels-photo-13123976.jpeg',
                     height: 350,
-                    // fit: BoxFit.fill,
+                    fit: BoxFit.fitHeight,
                     width: double.infinity,
                   ),
-
-                  const Text("Hola Pau"),
+                  Text("hola deadpool"),
                 ],
               ),
             ),

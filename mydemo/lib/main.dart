@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mydemo/config/router/router.dart';
+import 'package:proyecto/config/router/router.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {

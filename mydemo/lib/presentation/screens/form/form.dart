@@ -1,28 +1,28 @@
+import 'package:proyecto/presentation/screens/form/radio/radioScreen.dart';
+import 'package:proyecto/presentation/screens/form/text/textScreen.dart';
 import 'package:flutter/material.dart';
-import 'package:mydemo/presentation/screens/form/radio/radio_screen.dart';
-import 'package:mydemo/presentation/screens/form/text/text_screen.dart';
 
-class FormScreen extends StatefulWidget {
-  const FormScreen({super.key});
-
-  @override
-  State<FormScreen> createState() => _FormScreenState();
+void main() {
+  runApp(FormScren());
 }
 
-class _FormScreenState extends State<FormScreen> {
-  int _indicador = 0;
+class FormScren extends StatefulWidget {
+  const FormScren({super.key});
 
-  final List<Widget> _elementos = <Widget>[
-    const RadioScreen(),
-    const TextScreen(),
-  ];
+  @override
+  State<FormScren> createState() => _FormScrenState();
+}
+
+class _FormScrenState extends State<FormScren> {
+  int _indicador = 0;
+  final List<Widget> _elementos = <Widget>[textScreen(), radioScreen()];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Formulario Screen"),
-        backgroundColor: Colors.deepPurpleAccent,
+        title: Text("formulario"),
+        backgroundColor: Colors.cyanAccent,
       ),
       body: _elementos[_indicador],
       bottomNavigationBar: BottomNavigationBar(
@@ -32,9 +32,12 @@ class _FormScreenState extends State<FormScreen> {
             _indicador = value;
           });
         },
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.text_fields), label: "Text"),
-          BottomNavigationBarItem(icon: Icon(Icons.radio), label: "Radio"),
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.text_decrease),
+            label: "text",
+          ),
+          BottomNavigationBarItem(icon: Icon(Icons.radio), label: "radio"),
         ],
       ),
     );

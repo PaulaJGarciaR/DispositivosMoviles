@@ -1,46 +1,45 @@
+import 'package:proyecto/config/router/app_router.dart';
+import 'package:proyecto/presentation/screens/form/form.dart';
+import 'package:proyecto/presentation/screens/screen.dart';
 import 'package:flutter/material.dart';
-import 'package:mydemo/config/router/app_router.dart';
-import 'package:mydemo/presentation/screens/form/form.dart';
-import 'package:mydemo/presentation/screens/screen.dart';
 
 class Routers {
-
-static final List<AppRouter> pages = [
-
-  AppRouter(
-    patch: '/',
-    title: 'Home',
-    description: 'Este apartado acede a la página principal',
-    icon: Icons.home,
-    context: (context) => const HomeScreen(),
-  ),
-
-  AppRouter(
-    patch: 'button',
-    title: 'Button',
-    description: 'Este apartado acede a la sección de botón',
-    icon: Icons.radio_button_checked,
-    context: (context) => const ButtonScreen(),
-  ),
-
-  AppRouter(
-    patch: 'card',
-    title: 'Card',
-    description: 'Este apartado acede a la sección de tarjetas',
-    icon: Icons.card_giftcard,
-    context: (context) => const CardScreen(),
-  ),
-
-  AppRouter(
-    patch: 'form',
-    title: 'Formulario Screen',
-    description: 'Este apartado acede a la sección de formulario',
-    icon: Icons.format_list_bulleted,
-    context: (context) => const FormScreen(),
-  ),
-
-];
-
-static route() =>{ for (var page in pages) page.patch: page.context};
-
+  static final List<AppRouter> pages = [
+    AppRouter(
+      patch: '/',
+      title: 'home',
+      description: 'pantalla inicial',
+      icon: Icons.home,
+      context: (context) => const HomeScreen(),
+    ),
+    AppRouter(
+      patch: 'button',
+      title: 'Button',
+      description: 'pantalla que contiene todos los botones',
+      icon: Icons.smart_button,
+      context: (context) => const ButtonScreen(),
+    ),
+    AppRouter(
+      patch: 'card',
+      title: 'Card',
+      description: 'pantalla  que contiene todos las cards',
+      icon: Icons.card_giftcard,
+      context: (context) => const CardScreen(),
+    ),
+    AppRouter(
+      patch: 'card2',
+      title: 'Card2',
+      description: 'pantalla  que contiene todos las cards',
+      icon: Icons.card_giftcard,
+      context: (context) => const CardScreen(),
+    ),
+    AppRouter(
+      patch: 'forms',
+      title: 'forms',
+      description: 'pantalla  que contiene todos las formularios',
+      icon: Icons.card_giftcard,
+      context: (context) => const FormScren(),
+    ),
+  ];
+  static route() => {for (var page in pages) page.patch: page.context};
 }
