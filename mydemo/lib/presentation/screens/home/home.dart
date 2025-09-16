@@ -1,4 +1,4 @@
-import 'package:proyecto/config/router/router.dart';
+import 'package:mydemo/config/router/router.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -9,7 +9,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("home screens"),
-        backgroundColor: Colors.red,
+        
       ),
       body: Center(
         child: FloatingActionButton(

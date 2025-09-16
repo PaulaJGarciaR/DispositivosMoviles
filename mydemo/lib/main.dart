@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:proyecto/config/router/router.dart';
+import 'package:mydemo/config/router/router.dart';
+import 'package:mydemo/config/theme/app_theme.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -14,6 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: Routers.route(),
+      theme: AppTheme(dark: true,selectColor: 3).getTheme(),
     );
   }
 }

@@ -8,7 +8,7 @@ class ButtonScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("button back"),
-        backgroundColor: Colors.purpleAccent,
+        
       ),
       body: SizedBox(
         width: double.infinity,
@@ -21,47 +21,47 @@ class ButtonScreen extends StatelessWidget {
                 onPressed: () {
                   Navigator.pop(context);
                 },
-                child: Text("button uno"),
+                child: const Text("button uno"),
               ),
-              ElevatedButton(onPressed: null, child: Text("disable")),
+              const ElevatedButton(onPressed: null, child: Text("disable")),
               ElevatedButton.icon(
                 onPressed: () {},
-                label: Text("whith icon"),
-                icon: Icon(Icons.account_tree_sharp),
+                label: const Text("whith icon"),
+                icon: const Icon(Icons.account_tree_sharp),
               ),
-              FilledButton(onPressed: () {}, child: Text("fallied")),
-              FilledButton(onPressed: null, child: Text("fallied")),
+              FilledButton(onPressed: () {}, child: const Text("fallied")),
+              const FilledButton(onPressed: null, child: Text("fallied")),
               FilledButton.icon(
                 onPressed: () {},
-                label: Text("fallied icon"),
-                icon: Icon(Icons.add_a_photo),
+                label: const Text("fallied icon"),
+                icon: const Icon(Icons.add_a_photo),
               ),
-              OutlinedButton(onPressed: () {}, child: Text("onlinebutton")),
-              OutlinedButton(onPressed: null, child: Text("online Disable")),
+              OutlinedButton(onPressed: () {}, child: const Text("onlinebutton")),
+              const OutlinedButton(onPressed: null, child: Text("online Disable")),
               OutlinedButton.icon(
                 onPressed: () {},
-                label: Text("icon"),
-                icon: Icon(Icons.abc_rounded),
+                label: const Text("icon"),
+                icon: const Icon(Icons.abc_rounded),
               ),
-              TextButton(onPressed: () {}, child: Text("texto")),
-              TextButton(onPressed: null, child: Text("texto 2")),
+              TextButton(onPressed: () {}, child: const Text("texto")),
+              const TextButton(onPressed: null, child: Text("texto 2")),
               TextButton.icon(
                 onPressed: () {},
-                label: Text("texto 3"),
-                icon: Icon(Icons.abc_rounded),
+                label: const Text("texto 3"),
+                icon: const Icon(Icons.abc_rounded),
               ),
               IconButton(
                 onPressed: () {},
-                icon: Icon(Icons.read_more_outlined),
+                icon: const Icon(Icons.read_more_outlined),
               ),
               IconButton(
                 onPressed: () {},
-                icon: Icon(Icons.read_more_outlined),
-                style: ButtonStyle(
+                icon: const Icon(Icons.read_more_outlined),
+                style: const ButtonStyle(
                   backgroundColor: WidgetStatePropertyAll(
-                    Colors.deepOrangeAccent,
+                    Colors.deepPurpleAccent,
                   ),
-                  iconColor: WidgetStatePropertyAll(Colors.amberAccent),
+                  iconColor: WidgetStatePropertyAll(Colors.white),
                 ),
               ),
             ],

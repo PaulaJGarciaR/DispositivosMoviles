@@ -11,15 +11,14 @@ class _textScreenState extends State<textScreen> {
 
   final _formKey = GlobalKey<FormState>();
   final TextEditingController _nameController = TextEditingController();
-
-  String? _musica;
-  bool _favorito = false;
-
   void send(){
     print(_nameController.text);
     print(_musica);
     print(_favorito);
   }
+
+  String? _musica;
+  bool _favorito = false;
 
   @override
   Widget build(BuildContext context) {
@@ -32,20 +31,20 @@ class _textScreenState extends State<textScreen> {
             children: [
               TextFormField(
                 controller: _nameController,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   labelText: "Digite nombre",
-                  icon: Icon(Icons.person)
+                  icon: Icon(Icons.person),
                 ),
               ),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
 
               DropdownButtonFormField<String>(
-                decoration: InputDecoration(
-                  labelText: "Musica Favorita",
-                  icon: Icon(Icons.person)
+                decoration: const InputDecoration(
+                  labelText: "Musica favorita",
+                  icon: Icon(Icons.person),
                 ),
                 value: _musica,
-                items: [
+                items: const [
                   DropdownMenuItem(
                     value: "Rock",
                     child: Text("Rock")
@@ -55,18 +54,18 @@ class _textScreenState extends State<textScreen> {
                     child: Text("Pop")
                   ),
                   DropdownMenuItem(
-                    value: "Jazz",
-                    child: Text("Jazz")
+                    value: "Electro",
+                    child: Text("Electro")
                   )
                 ],
-                onChanged: (value){
+                onChanged: (value) {
                   setState(() {
                     _musica = value;
                   });
                 },
               ),
 
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
 
               SwitchListTile(
                 value: _favorito, 
@@ -76,11 +75,13 @@ class _textScreenState extends State<textScreen> {
                 title: const Text("Favorito"),
               ),
 
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
+
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: send, child: const Text("Send")),
+                  onPressed: send, 
+                  child: const Text("Send")),
               )
             ],
           )

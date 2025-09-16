@@ -1,5 +1,5 @@
-import 'package:proyecto/presentation/screens/form/radio/radioScreen.dart';
-import 'package:proyecto/presentation/screens/form/text/textScreen.dart';
+import 'package:mydemo/presentation/screens/form/radio/radioScreen.dart';
+import 'package:mydemo/presentation/screens/form/text/textScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -22,7 +22,6 @@ class _FormScrenState extends State<FormScren> {
     return Scaffold(
       appBar: AppBar(
         title: Text("formulario"),
-        backgroundColor: Colors.cyanAccent,
       ),
       body: _elementos[_indicador],
       bottomNavigationBar: BottomNavigationBar(

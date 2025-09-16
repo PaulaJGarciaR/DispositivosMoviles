@@ -1,6 +1,6 @@
-import 'package:proyecto/config/router/app_router.dart';
-import 'package:proyecto/presentation/screens/form/form.dart';
-import 'package:proyecto/presentation/screens/screen.dart';
+import 'package:mydemo/config/router/app_router.dart';
+import 'package:mydemo/presentation/screens/form/form.dart';
+import 'package:mydemo/presentation/screens/screen.dart';
 import 'package:flutter/material.dart';
 
 class Routers {
