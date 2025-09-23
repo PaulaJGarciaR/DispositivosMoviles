@@ -3,7 +3,7 @@ import 'package:mydemo/presentation/screens/form/text/textScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(FormScren());
+  runApp(const FormScren());
 }
 
 class FormScren extends StatefulWidget {
@@ -21,7 +21,8 @@ class _FormScrenState extends State<FormScren> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("formulario"),
+        title: const Text("formulario"),
+       
       ),
       body: _elementos[_indicador],
       bottomNavigationBar: BottomNavigationBar(
@@ -31,7 +32,7 @@ class _FormScrenState extends State<FormScren> {
             _indicador = value;
           });
         },
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.text_decrease),
             label: "text",

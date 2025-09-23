@@ -9,71 +9,81 @@ class radioScreen extends StatefulWidget {
 
 class _radioScreenState extends State<radioScreen> {
 
-  String _generoMusical='Rock';
+  String _generoMusical = 'Rock';
 
-  bool _football=false;
-  bool _basketball=false;
-  bool _skating=false;
-  
+  bool _football = false;
+  bool _basketball = false;
+  bool _voleiball = false;
+  bool _skating = false;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text("Selecciona Genero Musical"),
-            RadioListTile(value:_generoMusical,
+      body: Padding(padding: EdgeInsets.all(8.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text("Seleccione genero musical"),
+          RadioListTile(
             title: Text("Rock"),
+            value: "Rock",
             groupValue: _generoMusical,
             onChanged: (value){
               setState(() {
-                _generoMusical=value ?? "";
+                _generoMusical = value ?? "";
               });
-            },),  
-            RadioListTile(value:_generoMusical,
+            },
+          ),
+          RadioListTile(
             title: Text("Pop"),
+            value: "Pop",
             groupValue: _generoMusical,
             onChanged: (value){
               setState(() {
-                _generoMusical=value ?? "";
+                _generoMusical = value ?? "";
               });
-            },),
-            const Text("Checkbox"),
-            CheckboxListTile(
-              title: Text("Futbol"),
-              value: _football,
-             onChanged: (value){
+            },
+          ),
+          Text("CheckBox"),
+          CheckboxListTile(
+            title: Text("Futbol"),
+            value: _football, 
+            onChanged: (value){
               setState(() {
-                _football=value!;
+                _football = value!;
               });
-
-             }),
-             CheckboxListTile(
-              title: Text("Basketball"),
-              value: _basketball,
-             onChanged: (value){
+            },
+          ),
+          CheckboxListTile(
+            title: Text("Basketball"),
+            value: _basketball, 
+            onChanged: (value){
               setState(() {
-                _basketball=value!;
+                _basketball = value!;
               });
-              
-             }),
-             CheckboxListTile(
-              title: Text("Patinaje"),
-              value: _skating,
-             onChanged: (value){
+            },
+          ),
+          CheckboxListTile(
+            title: Text("voleibol"),
+            value: _voleiball, 
+            onChanged: (value){
               setState(() {
-                _skating=value!;
+                _voleiball = value!;
               });
-             })
-          ],
-        ),
+            },
+          ),
+          CheckboxListTile(
+            title: Text("patinaje"),
+            value: _skating, 
+            onChanged: (value){
+              setState(() {
+                _skating = value!;
+              });
+            },
+          ),
+        ],
       ),
+    ),
     );
   }
 }
-
-
-

@@ -8,7 +8,7 @@ class ButtonScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("button back"),
-        
+      
       ),
       body: SizedBox(
         width: double.infinity,
@@ -59,9 +59,9 @@ class ButtonScreen extends StatelessWidget {
                 icon: const Icon(Icons.read_more_outlined),
                 style: const ButtonStyle(
                   backgroundColor: WidgetStatePropertyAll(
-                    Colors.deepPurpleAccent,
+                    Colors.deepOrangeAccent,
                   ),
-                  iconColor: WidgetStatePropertyAll(Colors.white),
+                  iconColor: WidgetStatePropertyAll(Colors.amberAccent),/*o materialstate*/
                 ),
               ),
             ],

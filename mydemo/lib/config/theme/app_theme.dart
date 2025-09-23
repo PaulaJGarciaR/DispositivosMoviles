@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
-const colorList = <Color>[
-Colors.indigo,
-Colors.indigoAccent,
-Color.fromARGB(255, 231, 70, 124),
-Color.fromARGB(255, 253, 84, 141),
+const colorlist = <Color> [
+  Colors.red,
+  Colors.indigoAccent,
+  Colors.blue,
+  Colors.yellow,
+  Color.fromARGB(255, 200, 100, 20),
 ];
 
 class AppTheme {
@@ -12,14 +13,15 @@ class AppTheme {
   final int selectColor;
   final bool dark;
 
-  AppTheme({this.dark=false,this.selectColor=0});
+  AppTheme({this.dark = false , this.selectColor = 0});
 
-  ThemeData getTheme()=> ThemeData(
-    colorSchemeSeed: colorList[selectColor],
-    brightness: dark ? Brightness.dark:Brightness.light,
-    appBarTheme: AppBarTheme(
-      centerTitle: false,
-      backgroundColor: Color.fromARGB(255, 253, 84, 141),
-    )
-  );
+ ThemeData getTheme()=> ThemeData(
+  colorSchemeSeed: colorlist[selectColor],
+  brightness: dark ? Brightness.dark:Brightness.light,
+  appBarTheme: AppBarTheme(
+    centerTitle: false,
+    backgroundColor: colorlist[selectColor],
+  )
+ );
+
 }
