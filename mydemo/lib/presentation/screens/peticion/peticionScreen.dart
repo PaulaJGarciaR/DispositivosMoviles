@@ -35,6 +35,44 @@ class ListCharacter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
-  }
+    return ListView.builder(
+      itemCount: character.length,
+      itemBuilder: (context, index) {
+        final size = MediaQuery.of(context).size;
+        NarutoCharacter pj = character[index];
+        return ListTile(
+          onTap: () {
+            print("Di tap");
+          },
+          title: Row(
+            children: [
+              Image.network(pj.images[0],
+              width: size.width* 0.2,
+              height: size.width* 0.2,),
+              SizedBox(
+                width: size.width*0.7,
+                child:Column(children: [
+                Text(pj.name),
+                Wrap(
+                  spacing: 8.0,
+                  runSpacing: 8.0,
+                  children: pj.jutsu.take(5).map((res){
+                    return 
+                    Chip(
+                      label: Text(res),
+                    );
+                  }).toList()
+                  ,
+                )],)
+              )
+              
+              
+            ],
+          ),
+          
+
+        );
+      },
+      );  
+      }
 }

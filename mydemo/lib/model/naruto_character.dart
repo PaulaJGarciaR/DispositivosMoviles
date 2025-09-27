@@ -1,3 +1,4 @@
+
 class NarutoCharacter {
   int id;
   String name;
